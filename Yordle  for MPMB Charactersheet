@@ -1,0 +1,39 @@
+var iFileName = "Runeterra:_Yordle_(5e_Race) transcribed by DrDorkness.js";
+RequiredSheetVersion(12.999);
+
+SourceList["RT:YR"] = {
+	name : "Runetera - Yordle",
+	abbreviation : "RT:YR",
+	group : "DrDorkness",
+	url : "https://www.dandwiki.com/wiki/Runeterra:_Yordle_(5e_Race)",
+	date : "2020/03/11"
+};
+
+// Adds 1 race
+RaceList["Yordle"] = {
+	regExpSearch : /yordle/i,
+	name : "Yordle",
+	sortname : "Yordle",
+	source : ["RT:YR"],
+	plural : "Yordle",
+	size : 4,
+	speed : { walk : { spd : 30, enc : 20 }, },
+    	languageProfs : ["Common", "Yordle"],
+	savetxt : { adv_vs : ["being charmed"] },
+	skillstxt : ["Perception"],
+	skills : ["Perception"],
+	age : "Yordles fully mature at 40, grow old at 400 and perish at 500, generally speaking.",
+	height : " Most Yordles are less than a meter tall. Your size is Small.",
+	weight : " Most Yordles weigh 60 pounds on average.",
+	improvements : "Yordle: +2 Dexterity, +1 Intelligence;",
+	scores : [0, 2, 0, 1, 0, 0],
+	trait : "Yordle (+2 Dexterity, +1 Intelligence)" + desc([
+		"Innate Magic. You know the cantrips friends and guidance. You require no material components to cast any of these spells.",
+    "Keen Senses. You have proficiency in the Perception skill.",
+    "Fey Ancestry. Yordles have advantage on saving throws against being charmed, and magic can't put Yordles to sleep."])};
+   	spellcastingBonus : 
+		name : "Innate Magic"
+		spells : ["friends"],["guidance"]
+		selection  ["friends"],["guidance"]
+		atwill : true
+};
