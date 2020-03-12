@@ -33,10 +33,15 @@ RaceList["Yordle"] = {
 		"Fey Ancestry. Yordles have advantage on saving throws against being charmed, and magic can't put Yordles to sleep.",
     ]),
 	spellcastingAbility : 4,
-	spellcastingBonus : {
+	spellcastingBonus : [{
 		name : "Innate Magic",
-		spells : ["friends", "guidance"],
-		selection : ["friends", "guidance"],
-		atwill : true
-        }
-};
+		spells : ["friends"],
+		selection : ["friends"],
+		firstCol : 'atwill'
+	}, {
+		name : "Innate Magic",
+		spells : ["guidance"],
+		selection : ["guidance"],
+		firstCol : 'atwill'
+	}],
+}
