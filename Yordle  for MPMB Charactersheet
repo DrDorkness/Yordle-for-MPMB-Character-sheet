@@ -1,4 +1,4 @@
-var iFileName = "Runeterra:_Yordle_(5e_Race) transcribed by DrDorkness.js";
+var iFileName = "Runeterra:_Yordle transcribed by DrDorkness.js";
 RequiredSheetVersion(12.999);
 
 SourceList["RT:YR"] = {
@@ -29,11 +29,14 @@ RaceList["Yordle"] = {
 	scores : [0, 2, 0, 1, 0, 0],
 	trait : "Yordle (+2 Dexterity, +1 Intelligence)" + desc([
 		"Innate Magic. You know the cantrips friends and guidance. You require no material components to cast any of these spells.",
-    "Keen Senses. You have proficiency in the Perception skill.",
-    "Fey Ancestry. Yordles have advantage on saving throws against being charmed, and magic can't put Yordles to sleep."])};
-   	spellcastingBonus : 
-		name : "Innate Magic"
-		spells : ["friends","guidance"]
-		selection  ["friends","guidance"]
+		"Keen Senses. You have proficiency in the Perception skill.",
+		"Fey Ancestry. Yordles have advantage on saving throws against being charmed, and magic can't put Yordles to sleep.",
+    ]),
+	spellcastingAbility : 4,
+	spellcastingBonus : {
+		name : "Innate Magic",
+		spells : ["friends", "guidance"],
+		selection : ["friends", "guidance"],
 		atwill : true
+        }
 };
